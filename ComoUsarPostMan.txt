@@ -1,17 +1,1 @@
-Passo 1: Crie um ngc do tipo 'POST' e utilize o diretorio localhost:3000/posts (ou o diretorio que vai mandar pra db)
-Passo 2: Faca upload das imagens que serao utilizadas para a pasta de uploads
-Passo 3:  Va em Body, utilize o tipo form-data. A key e como vc colocou no codigo (nesse caso utilizarei o "descricao") e no value vc faz upload da imagem 
-Passo 4: Cire um ngc do tipo 'PUT' para atualizar a imagem, utilize o diretorio localhost:3000/upload/IdDaFoto
-Passo 5: Va em body, utilize o tipo raw. La dentro coloque oque vai atualizar dentro de "" (aspas duplas) depois : (dois pontos) e em seguida o valor ou descricao da imagem,etc.
 
-OBS: 1: Caso queira apagar uma foto, pode apagar direto do banco de dados e refazer todos esses passos para postar denovo
-2: 
-
-Codigo que diz qual palavra utilizar na hora de colocar a key no postman: 
-
-export async function uploadImagem(req, res) {
-  const novoPost = {
-    descricao: "",
-    imgUrl: req.file.originalname,
-    alt: "",
-  };
